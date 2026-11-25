@@ -14,10 +14,17 @@ export default function VoiceCall({navigation, route}) {
   const {item} = route.params;
   const [isMute, setIsMute] = useState(false);
 
-  const onPressMute = () => setIsMute(!isMute);
+  const onPressMute = () => {
+    console.log('call is mute');
 
-  const onPressEnd = () => navigation.navigate(TabNav.Message);
+    setIsMute(!isMute);
+  };
 
+  const onPressEnd = () => {
+    console.log('call ended');
+
+    navigation.navigate(TabNav.Message);
+  };
   return (
     <View style={styles.mainContainerSurface}>
       <CHeader title={strings.voiceCall} />

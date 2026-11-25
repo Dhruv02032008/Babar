@@ -19,6 +19,8 @@ export default function CategoriesScreen(props) {
   const categoryRef = useRef(null);
 
   const onPressCategory = item => {
+    console.log('seleact a categories');
+    
     categoryRef.current.show();
     setSelectedCategory(item);
   };

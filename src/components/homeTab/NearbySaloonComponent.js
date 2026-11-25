@@ -21,7 +21,7 @@ const NearbySaloonComponent = ({itm, isVertical = true}) => {
     console.log('On Press Book Now Button');
   };
 
-  const onPressDetailSalon = () =>
+  const onPressDetailSalon = () => 
     navigation.navigate(StackNav.SalonDetail, {item: itm});
 
   return (

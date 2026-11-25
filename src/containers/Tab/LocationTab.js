@@ -12,7 +12,10 @@ import CButton from '../../components/common/CButton';
 import {StackNav} from '../../navigation/NavigationKeys';
 
 export default function Locationtab({navigation}) {
-  const onPressFind = () => navigation.navigate(StackNav.CurrentLocation);
+  const onPressFind = () => { 
+    console.log('find salons');
+    
+    navigation.navigate(StackNav.CurrentLocation);}
   return (
     <View style={styles.mainContainerSurface}>
       <CHeader title={strings.currentLocation} />

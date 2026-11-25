@@ -22,21 +22,28 @@ export default function BookingTab() {
 
   const onPressSelect = item => {
     if (item === strings.upcoming) {
+      console.log('you select upcoming tab');    
       const data = myAppBookingData.filter(
         itm => itm.status === strings.upcoming,
       );
       setSalonData(data);
     } else if (item === strings.completed) {
+      console.log('You select completed teb');
+      
       const data = myAppBookingData.filter(
         itm => itm.status === strings.completed,
       );
       setSalonData(data);
     } else if (item === strings.pending) {
+      console.log('You select pending tab');
+      
       const data = myAppBookingData.filter(
         itm => itm.status === strings.pending,
       );
       setSalonData(data);
     } else {
+      console.log('You select all tab');
+      
       setSalonData(myAppBookingData);
     }
     setSelectedCategory(item);

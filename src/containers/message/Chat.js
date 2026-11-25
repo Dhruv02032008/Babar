@@ -32,6 +32,7 @@ export default function Chat({navigation, route}) {
   const [selectImage, setSelectImage] = useState(null);
 
   const onPressCamera = () => {
+    console.log('open gallery');
     ImagePicker.openCamera({
       mediaType: 'photo',
       includeBase64: true,
@@ -42,6 +43,7 @@ export default function Chat({navigation, route}) {
   };
 
   const onPressGallery = () => {
+    console.log('open document');
     ImagePicker.openPicker({
       mediaType: 'photo',
       includeBase64: true,
@@ -57,8 +59,10 @@ export default function Chat({navigation, route}) {
 
   const onPressFile = () => setShowModal(!showModal);
 
-  const onPressVoiceCall = () =>
-    navigation.navigate(StackNav.VoiceCall, {item});
+  const onPressVoiceCall = () =>{
+    console.log('click voiceCall');
+    
+    navigation.navigate(StackNav.VoiceCall, {item});}
 
   const SenderMessage = memo(({item, index}) => {
     return (
