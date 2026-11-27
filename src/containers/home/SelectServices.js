@@ -11,7 +11,10 @@ import {moderateScale} from '../../common/constants';
 import ServiceSaloonDetail from '../../components/homeTab/ServiceSaloonDetail';
 
 export default function SelectServices({navigation}) {
-  const onPressContinue = () => navigation.navigate(StackNav.SelectDateAndTime);
+  const onPressContinue = () => {
+    console.log('Continue');
+    
+    navigation.navigate(StackNav.SelectDateAndTime);}
 
   return (
     <View style={styles.mainContainerSurface}>

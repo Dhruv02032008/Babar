@@ -67,7 +67,9 @@ export default function ServiceSaloonDetail() {
   const RenderItem = ({item}) => {
     return (
       <TouchableOpacity
-        onPress={() => onPressRadio(item)}
+        onPress={() => {
+          console.log(item.category);
+          onPressRadio(item)}}
         style={localStyles.root}>
         <CText type={'r14'} style={styles.flex} color={colors.grayText}>
           {item.title}

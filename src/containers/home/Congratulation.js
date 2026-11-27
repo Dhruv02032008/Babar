@@ -13,9 +13,15 @@ import {moderateScale} from '../../common/constants';
 import {StackNav, TabNav} from '../../navigation/NavigationKeys';
 
 export default function Congratulation({navigation}) {
-  const onPressHome = () => navigation.navigate(TabNav.Home);
+  const onPressHome = () => {
+    console.log('Back to Home');
+    
+    navigation.navigate(TabNav.Home);}
 
-  const onPressDetails = () => navigation.navigate(StackNav.PaymentDetail);
+  const onPressDetails = () => {
+    console.log('View Details');
+    
+    navigation.navigate(StackNav.PaymentDetail);}
 
   return (
     <View style={styles.mainContainerSurface}>
