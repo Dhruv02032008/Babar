@@ -15,7 +15,10 @@ import ChoosePayment from '../../components/modals/ChoosePayment';
 export default function YourAppointment({navigation}) {
   const choosePaymentRef = React.useRef(null);
 
-  const onPressPayNow = () => choosePaymentRef.current.show();
+  const onPressPayNow = () => {
+    console.log('Pay now');
+    
+    choosePaymentRef.current.show();}
 
   return (
     <View style={styles.mainContainerSurface}>

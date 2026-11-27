@@ -37,10 +37,16 @@ export default function SalonDetail({route, navigation}) {
   const onPressLikeButton = () => setIsLiked(!isLiked);
 
   const onPressSelect = item => {
+    console.log('You select :', item);
+
     setSelectedCategory(item);
   };
 
-  const onPressBookNow = () => navigation.navigate(StackNav.SelectGender);
+  const onPressBookNow = () => {
+    console.log('book now');
+
+    navigation.navigate(StackNav.SelectGender);
+  };
 
   const RenderCategory = () => {
     switch (selectedCategory) {

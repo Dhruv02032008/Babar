@@ -18,6 +18,7 @@ export default KeyBoardAvoidWrapper = ({
       style={[styles.flex, containerStyle]}
       behavior={isIOS ? 'padding' : null}>
       <ScrollView
+        keyboardShouldPersistTaps={'handled'}
         nestedScrollEnabled={true}
         showsVerticalScrollIndicator={false}
         contentContainerStyle={contentContainerStyle}

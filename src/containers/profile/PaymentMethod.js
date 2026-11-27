@@ -22,6 +22,8 @@ export default function PaymentMethod({navigation}) {
   const onPressAddNewCard = () => navigation.navigate(StackNav.AddNewCard);
 
   const RenderCard = ({item}) => {
+    console.log(item);
+
     return (
       <View style={localStyles.cardContainer}>
         <View style={[styles.flexRow, styles.itemsCenter]}>

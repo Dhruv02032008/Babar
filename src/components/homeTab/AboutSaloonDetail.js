@@ -13,6 +13,8 @@ import images from '../../assets/images';
 
 export default function AboutSaloonDetail() {
   const SaloonAboutUs = () => {
+    console.log('You are click on About Us');
+    
     return (
       <CText type={'r14'} style={styles.flex}>
         {strings.aboutUsDesc}
@@ -45,6 +47,7 @@ export default function AboutSaloonDetail() {
   };
 
   const OurStaffs = () => {
+    console.log('You are click on Our Staffs');
     return (
       <FlashList
         data={saloonStaff}
@@ -71,6 +74,7 @@ export default function AboutSaloonDetail() {
   };
 
   const OpenClosed = () => {
+    console.log('You are click on OpenClosed');
     return (
       <FlashList
         data={saloonTime}
@@ -97,6 +101,8 @@ export default function AboutSaloonDetail() {
   };
 
   const ContactUs = () => {
+     console.log('You are click on Contact Us');
+     
     return (
       <FlashList
         data={saloonContact}

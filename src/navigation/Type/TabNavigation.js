@@ -42,6 +42,11 @@ export default function TabNavigation() {
 
   return (
     <Tab.Navigator
+    screenListeners={({route}) => ({
+    focus: () => {
+      console.log('Current Focused Tab:', route.name);
+    },
+  })}
       screenOptions={{
         tabBarHideOnKeyboard: isAndroid ? true : false,
         headerShown: false,

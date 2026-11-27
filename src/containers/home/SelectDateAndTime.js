@@ -15,10 +15,20 @@ export default function SelectDateAndTime({navigation}) {
   const [selectedDate, setSelectedDate] = useState(null);
   const [selectedTime, setSelectedTime] = useState(null);
 
-  const onPressDate = item => setSelectedDate(item);
-  const onPressTime = item => setSelectedTime(item);
+  const onPressDate = item => {
+    console.log(item.date, item.day);
 
-  const onPressContinue = () => navigation.navigate(StackNav.YourAppointment);
+    setSelectedDate(item);
+  };
+  const onPressTime = item => {
+    console.log(item);
+    
+    setSelectedTime(item);}
+
+  const onPressContinue = () => {
+    console.log('Continue');
+    
+    navigation.navigate(StackNav.YourAppointment);}
 
   const DateComponent = ({item, index}) => {
     return (

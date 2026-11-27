@@ -39,7 +39,7 @@ export default function HomeTab(props) {
   };
 
   const onPressCategories = () => {
-    console.log('Press on categories');
+    console.log('click on categories');
     
     navigation.navigate(StackNav.CategoriesScreen);
   };

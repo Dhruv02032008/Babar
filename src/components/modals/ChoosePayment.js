@@ -25,11 +25,21 @@ export default function ChoosePayment(props) {
   const [selectedCard, setSelectedCard] = useState(null);
   let {SheetRef} = props;
 
-  const onPressClose = () => SheetRef.current?.hide();
+  const onPressClose = () => {
+    console.log('close');
 
-  const onPressSelectCard = item => setSelectedCard(item);
+    SheetRef.current?.hide();
+  };
+
+  const onPressSelectCard = item => {
+    console.log(item);
+
+    setSelectedCard(item);
+  };
 
   const onPressAddNew = () => {
+    console.log('Add New card');
+
     setTimeout(() => {
       SheetRef.current?.hide();
       navigation.navigate(StackNav.AddNewCard);
@@ -37,6 +47,8 @@ export default function ChoosePayment(props) {
   };
 
   const onPressPayNow = () => {
+    console.log('Pay Now');
+
     setTimeout(() => {
       SheetRef.current?.hide();
       navigation.navigate(StackNav.Congratulation);

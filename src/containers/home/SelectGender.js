@@ -21,9 +21,15 @@ import {StackNav} from '../../navigation/NavigationKeys';
 export default function SelectGender({navigation}) {
   const [gender, setGender] = useState(null);
 
-  const onPressGender = itm => setGender(itm);
+  const onPressGender = itm => {
+    console.log('Your gender is :', itm);
+    
+    setGender(itm);}
 
-  const onPressContinue = () => navigation.navigate(StackNav.SelectServices);
+  const onPressContinue = () => {
+    console.log('Continue');
+    
+    navigation.navigate(StackNav.SelectServices);}
 
   const RenderGender = ({code, img, title}) => {
     return (
